@@ -1,5 +1,5 @@
-import Expenses from "./components/Expenses/Expenses";
-import NewExpense from "./components/NewExpense/NewExpense";
+import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
   const expenses = [
@@ -7,14 +7,18 @@ function App() {
       id: 1,
       title: 'Rent',
       amount: 1000,
-      date: new Date(2020, 12, 2)
+      date: new Date(2020, 12, 2),
     },
   ];
-  
+
+  function addExpenseHandler(expense) {
+    console.log(expense);
+  }
+
   return (
     <div>
-      <NewExpense />
-      <Expenses items={expenses}/>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
     </div>
   );
 }
