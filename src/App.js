@@ -7,8 +7,8 @@ function App() {
       id: 1,
       title: 'Rent',
       amount: 1000,
-      date: new Date(2020, 12, 2),
-    },
+      date: new Date(2020, 12, 2)
+    }
   ];
 
   function addExpenseHandler(expense) {
